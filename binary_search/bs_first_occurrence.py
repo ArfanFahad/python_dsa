@@ -21,8 +21,8 @@
 # The value `2` appears at indices 1, 2, and 3.
 # The first occurrence is at index 1
 
-arr = [1, 2, 2, 2, 3, 4]
-target = 2
+arr = [1, 2, 3, 4, 5, 5, 5, 6, 7, 8]
+target = 5
 
 def bs_first_occurrence(arr, target):
     left_index = 0
@@ -33,4 +33,13 @@ def bs_first_occurrence(arr, target):
         mid_value = arr[mid_index]
         
         if mid_value == target:
+            result = mid_index
+            right_index = mid_index - 1
+        elif mid_value < target:
+            left_index = mid_index + 1
+        else:
+            right_index = mid_index - 1
+    return result
+
+print(bs_first_occurrence(arr, target))
 
