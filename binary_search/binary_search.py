@@ -1,4 +1,5 @@
-arr = [12, 44, 56, 78, 134, 229, 313, 340]
+arr = [1, 3, 5, 7, 9, 11]
+target = 4
 
 def binary_search(arr, target):
     left_index = 0
@@ -14,8 +15,8 @@ def binary_search(arr, target):
             left_index = mid_index + 1
         else:
             right_index = mid_index - 1
-    return None
+    return -1
 
-print(binary_search(arr, 313))
+print(binary_search(arr, target))
 
 
