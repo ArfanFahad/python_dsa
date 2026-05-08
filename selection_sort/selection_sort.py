@@ -8,8 +8,16 @@ def find_smallest(arr):
 		if arr[i] < smallest:
 			smallest = arr[i]
 			smallest_index = i
-	print("Given Array = ", arr)
-	print("Smallest Index = ", smallest_index)
-	print("Smallest number = ", smallest)
+	return smallest_index
 
-find_smallest(arr)
+def selection_sort(array):
+    new_array = []
+    
+    for i in range(len(array)):
+        smallest_number = find_smallest(array)
+        new_array.append(array.pop(smallest_number))
+    return new_array
+
+
+print('Given Array: ', arr)
+print('After selection sort: ', selection_sort(arr))
