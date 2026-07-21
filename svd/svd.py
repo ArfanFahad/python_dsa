@@ -15,7 +15,7 @@ ratings = np.array([
     [0, 0, 4, 5]
 ])
 
-U, S, VT = np.linalg.svd(ratings);
+U, S, VT = np.linalg.svd(ratings)
 
 print("U: ")
 print(U)
